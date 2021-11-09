@@ -11,6 +11,7 @@ namespace StackQueue
             linkedQueue.enQueue(30);
             linkedQueue.enQueue(70);
             linkedQueue.Display();
+            linkedQueue.deQueue();
         }
     }
 }

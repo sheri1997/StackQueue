@@ -27,6 +27,22 @@ namespace StackQueue
             }
             Console.WriteLine(node.data);//will print the queue.
         }
+        internal void deQueue()
+        {
+            if(this.head!=null)//if Queue is Empty
+            {
+                Console.WriteLine("Queue is Empty");
+                return;
+            }
+            else
+            {
+                while(this.head!=null)//till the queue becomes empty.
+                {
+                    Console.WriteLine("Value Deleted = " + this.head.data);//print the value which is to be deleted.
+                    this.head = this.head.next;//increment the position.
+                }
+            }
+        }
         internal void Display()//method used to display the Stack.
         {
             Node temp = this.head;//inintialize the pointer to head.
