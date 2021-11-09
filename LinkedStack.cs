@@ -26,6 +26,35 @@ namespace StackQueue
             }
             this.top = node;//this will set the top value as the pointer.
         }
+        internal void peakOperation()
+        {
+            if(this.top==null)//if there is no elemnt in the stack
+            {
+                Console.WriteLine("Stack is Empty");
+                return;
+            }
+            else
+            {
+                Console.WriteLine("Top Element = "+this.top.data);//display the top elemnent.
+            }
+        }
+        internal void popOperation()//Pop Method is written
+        {
+            if (this.top == null)//if there is no element in the Stack.
+            {
+                Console.WriteLine("Stack is Empty");
+            }
+            Console.WriteLine("Value Popped = " + this.top.data);//amd return the top postion.
+            this.top = this.top.next;//increment the top position to point to the next node.
+        }
+        internal void isEmpty()//this method is used to display both peak and pop
+        {
+            while(this.top!=null)//if the stack is not empty.
+            {
+                peakOperation();
+                popOperation();
+            }
+        }
         internal void Display()//method used to display the Stack.
         {
             Node temp = this.top;//inintialize the pointer to top.
