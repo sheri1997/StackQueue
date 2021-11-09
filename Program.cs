@@ -6,7 +6,11 @@ namespace StackQueue
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the Satck and Queue Program");//message displayed in the master branch.
+            LinkedStack linkedStack = new LinkedStack();//object of the LinkedStack Class.
+            linkedStack.pushElement(70);//this will go in the last.
+            linkedStack.pushElement(30);
+            linkedStack.pushElement(56);//this will go in the top.
+            linkedStack.Display();//this will display.
         }
     }
 }
